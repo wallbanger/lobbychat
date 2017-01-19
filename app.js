@@ -9,8 +9,20 @@ http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
 });
 
-app.use(function (req, res) {
-    res.end('hello');
+app.use(function (req, res, next) {
+    if(req.url == '/') {
+        res.end('Hello');
+    } else {
+        next();
+    }
+});
+
+app.use(function (req, res, next) {
+    if(req.url == '/page') {
+        res.end('Page');
+    } else {
+        next();
+    }
 });
 
 // var routes = require('./routes');
