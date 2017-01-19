@@ -25,6 +25,10 @@ app.use(function (req, res, next) {
     }
 });
 
+app.use(function () {
+   res.send(404, 'Woops, Page not found!')
+});
+
 // var routes = require('./routes');
 // var user = require('./routes/user');
 //
