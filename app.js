@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
     }
 });
 
-app.use(function () {
+app.use(function (req, res) {
    res.send(404, 'Woops, Page not found!')
 });
 
