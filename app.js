@@ -50,7 +50,6 @@ app.use(function (err, req, res, next) {
 // var routes = require('./routes');
 // var user = require('./routes/user');
 //
-//
 // // all environments
 // app.set('port', process.env.PORT || 3000);
 // app.set('views', path.join(__dirname, 'views'));
