@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%- blocks.title %></title>
+    <title><%= blocks.title %></title>
     <link rel="stylesheet" href="/vendor/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -13,11 +13,9 @@
 <header>
     <%- blocks.header %>
 </header>
-<section>
+<section class="container">
 
-    <% partial('../partials/TopNavigation') %>
-
-    <h1><%- blocks.title %></h1>
+    <%-partial('../partials/topNavigation') %>
 
     <%- body %>
 </section>
