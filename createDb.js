@@ -1,9 +1,11 @@
+var mongoose = require('./libs/mongoose');
 var User = require('./models/user').User;
 
-var user = new User({
-    username: 'Tester'
-});
+mongoose.connection.on('open', function () {
 
-user.save(function (err, user, affected) {
-    console.log(arguments);
+    var db = mongoose.connection.db;
+    db.dropDatabase(function (err) {
+        if (err) throw err;
+        console.log('ok');
+    })
 });
